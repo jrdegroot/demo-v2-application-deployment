@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: demo.local
+    - host: demo.{{ .Values.environment }}
       http:
         paths:
           - path: /v2/
